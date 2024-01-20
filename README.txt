@@ -1,9 +1,15 @@
-CS 374 - Assignment 5 README
+OTP ENCYPTION README
 
-*NOTE: A makefile is provided instead of a compileall ( you may need to run 'chmod +x p5testscript' )
-
+*NOTE: A makefile is provided
 To compile the program, utilize the line:   make
 *NOTE: program will not compile unless compiled in C99.
 
-To run the program after compilation, utilize the following in Bash: ./ RANDOM_PORT1 RANDOM_PORT2 > mytestresults 2>&1
-where numbers are filled in for RANDOM_PORT1 and RANDOM_PORT2 between 55,000 and 65,000
+To run the program after compilation, utilize the following in Bash: 
+./keygen [keyname] > [exported plaintext file with key]
+enc_server [port number] &
+dec_server [port number] &
+
+enc_client [plaintext to be converted] [key for conversion] [port number] > [ciphertext file for export]
+dec_client [ciphertext to be converted] [key for conversion] [port number] > [plaintext file for export]
+
+*NOTE: ensure background processes are killed after execution
